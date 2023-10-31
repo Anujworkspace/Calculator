@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-l from-slate-500 to-slate-700 ">
+    <div class="lg:w-[30%] md:w-[60%] 
+    shadow-lg shadow-cyan-500 bg-gradient-to-l from-slate-600 to-slate-700 border-2
+    my-8 rounded-xl h-screen container m-auto flex flex-col bg-black">
+
+        <div class="bg-cyan-300 
+        shadow-slate-700 shadow-lg 
+        text-right text-4xl text-black font-semibold rounded w-[90%] h-[180px] m-auto container" id="result">
+            0
+        </div>
+
+
+        <div class="text-white  bg-gradient-to-l from-slate-500 to-slate-700 border-4  h-[60%] rounded-xl w-[90%] m-auto">
+
+
+
+            <div class="flex flex-wrap  justify-between my-4 w-full">
+
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="clearALL()">C</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('()')">()</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('/100')">%</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('/')">/</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('7')">7</button>
+                <button class="m-2 px-6 rounded hover:shadow-lg hover:shadow-cyan-500/50  hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('8')">8</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('9')">9</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('*')">x</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('4')">4</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('5')">5</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('6')">6</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('-')">-</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('1')">1</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('2')">2</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('3')">3</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('+')">+</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('+/-')">+/-</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('0')">0</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="calc('.')">.</button>
+                <button class=" m-2 px-6 rounded  hover:shadow-lg hover:shadow-cyan-500/50 hover:bg-slate-400 hover:text-slate-700 bg-[rgb(52,52,52)] w-1/5 py-3 text-center border-black"
+                    onclick="results()">=</button>
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <script>
+            function calc(symbol) {
+                if(result.innerText == '0'){
+                    result.innerText = symbol;
+                }
+                else{
+                    result.innerText += symbol;
+                }
+            }
+
+            function clearALL() {
+                result.innerText = 0;
+            }
+
+            function results() {
+                let final = eval(result.innerText);
+                result.innerText = final
+            }
+
+
+        </script>
+</body>
+
+</html>
